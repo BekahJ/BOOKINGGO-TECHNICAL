@@ -52,9 +52,11 @@ public class BookingGoTechnical {
 	      	int passengers = input.nextInt();
 	      	input.close();
 	      	
-	      	//JSONArray options = new JSONArray();
-	      	//options = getAllResponses(pickupIn, dropoffIn, passengers);
-	      	
+	      	JSONArray options = new JSONArray();
+	      	getResponse("dave", pickupIn, dropoffIn);
+	      	getResponse("eric", pickupIn, dropoffIn);
+	      	options = getBestOptions(getResponse("jeff", pickupIn, dropoffIn), passengers);
+	      	System.out.println(options);
 	      	
 		}
 		catch (Exception e)
